@@ -73,7 +73,7 @@ jupyter notebook
 
 🔗 [GitHub Repository](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction)
 
-🔗 [Data Set Csv file](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction/blob/main/Medical_insurance.csv)
+🔗 [Data Set Csv file](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction/blob/main/data/Medical_insurance.csv)
 
 🔗 [Data Set Link](https://www.kaggle.com/datasets/harishkumardatalab/medical-insurance-price-prediction?resource=download)
 
