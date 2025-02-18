@@ -1,7 +1,3 @@
-Here’s your **README.md** file to showcase your project as a **data analyst** and impress people on LinkedIn and GitHub. 🚀
-
----
-
 # **Medical Insurance Charges Analysis & Prediction**
 
 ## **📌 Project Overview**
