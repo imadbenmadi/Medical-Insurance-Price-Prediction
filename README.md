@@ -68,7 +68,10 @@ jupyter notebook
 <!-- 🔗 [Tableau Dashboard (if applicable)](your_tableau_link_here)   -->
 
 🔗 [GitHub Repository](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction)
-🔗 [Kaggle ](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction)
+
+🔗 [Kaggle ](https://www.kaggle.com/code/imedbenmadi/notebook628d4598db)
+
+----
 
 🔗 [Data Set started Csv file](https://github.com/imadbenmadi/Medical-Insurance-Price-Prediction/blob/main/data/Medical_insurance.csv)
 
