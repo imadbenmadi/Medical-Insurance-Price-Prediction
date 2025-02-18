@@ -34,35 +34,57 @@ The dataset is a filtered version of the **Medical Insurance Price Prediction** 
 -   **Polynomial Regression** (To capture non-linear relationships)
 -   **Ridge Regression** (To prevent overfitting & improve predictions)
 
-## **🛠️ Tools & Technologies**
 
-📌 **Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn)**  
-📌 **Jupyter Notebook** for analysis  
-📌 **Tableau** (Optional - for data visualization)
+## 📌 Key Steps:
 
-## **🚀 How to Run the Project?**
+✅ Exploratory Data Analysis (EDA) – Cleaning, transformations, and understanding trends 📊
 
-1️⃣ Clone this repository
+✅ Feature Engineering – Handling categorical and numerical features
 
-```bash
-git clone https://github.com/yourusername/medical-insurance-analysis.git
-cd medical-insurance-analysis
-```
+✅ Model Training & Validation – From basic regression to polynomial regression with cross-validation
 
-2️⃣ Install dependencies
+✅ Hyperparameter Tuning – Finding the best degree and regularization (Ridge Regression) 🔥
 
-```bash
-pip install -r requirements.txt
-```
+✅ Visualizing Performance – Score plots, distribution plots, and comparisons of different models
 
-3️⃣ Open **Jupyter Notebook**
+🔍 After trying random splits, cross-validation, and polynomial transformations, I optimized the final model to achieve the best balance between performance and generalization.
 
-```bash
-jupyter notebook
-```
+This project was a great hands-on experience in Data Science & Machine Learning, and I’m excited for more! 🚀
+Final Best Choice: k=6, Degree=2
+R2: 84.0%
+MSE: 23700278.168564092
+## Explotary Data Analysis 
+![alt text](<reports/figures/EDA/box plot for charges with respect to smoker.png>)
+This box plot compares insurance charges between smokers and non-smokers. Key insights:
 
-4️⃣ Run the notebook and explore the analysis!
+1. **Smokers pay significantly higher charges**: The median insurance cost for smokers is much higher than for non-smokers.
+2. **Wider spread among smokers**: The range (interquartile range and whiskers) for smokers is much larger, indicating high variability in insurance costs.
+3. **More outliers in non-smokers**: While non-smokers generally have lower charges, there are several outliers with higher costs.
+4. **Clear distinction**: Smoking status is a strong factor influencing insurance charges, likely due to increased health risks associated with smoking.
 
+This suggests that smoking has a major financial impact on insurance costs.
+-----
+![alt text](<reports/figures/EDA/correlation Heat map.png>)
+This heatmap represents the correlation matrix of variables related to insurance charges. Key insights:
+1. **Age vs. Charges (0.30)**: Moderate positive correlation, indicating that older individuals tend to have higher insurance charges.
+2. **BMI vs. Charges (0.20)**: Weak positive correlation, suggesting that higher BMI may slightly contribute to higher insurance costs.
+3. **No. of Children vs. Charges (0.07)**: Very weak correlation, implying that the number of children has little impact on insurance charges.
+4. **Age vs. BMI (0.11)** and **Age vs. No. of Children (0.04)**: Almost no correlation, showing that these factors are independent.
+Overall, age has the strongest impact on charges, while the number of children is almost irrelevant. 
+----
+## Code snaps :
+### use cross validation with polynomial regression
+The code uses **5-fold cross-validation** to determine the best polynomial degree for regression. It iterates through degrees **1 to 10**, selecting the one with the **highest mean R² score** while avoiding overfitting (negative R²). The final model is trained using this optimal degree, and its performance is evaluated with **R², MSE, and distribution plots** of actual vs. predicted values.
+![alt text](<images/using cross validation with polynomial regression.png>)
+-----
+### final model traing code :
+![alt text](<images/final model traing code.png>)
+### final score and mse:
+![alt text](<reports/figures/Best R² Score for Different K-Folds.png>)
+-----
+### distribution plot of the final model : 
+![alt text](<reports/figures/Hyper-params tuning using Piplines (grid search + ridge regression + cv).png>)
+---
 ## **📌 Project Demo & GitHub Link**
 
 <!-- 🔗 [Tableau Dashboard (if applicable)](your_tableau_link_here)   -->
