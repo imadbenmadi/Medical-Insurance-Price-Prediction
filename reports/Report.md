@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This project aims to predict **medical insurance charges** based on demographic and health-related features. We explored the dataset, performed exploratory data analysis (EDA), and tested multiple models to achieve the best predictive performance.
+This project aims to predict **medical insurance charges** based on demographic and health-related features. I explored the dataset, performed exploratory data analysis (EDA), and tested multiple models to achieve the best predictive performance.
 
 ---
 
@@ -22,11 +22,11 @@ This project aims to predict **medical insurance charges** based on demographic 
 
 ## 3. Exploratory Data Analysis (EDA)
 
-We conducted the following analyses:
+I conducted the following analyses:
 
--   **Data Cleaning:** No missing values were found.
+-   **Data Cleaning:** No missing values Ire found.
 -   **Feature Distribution:**
-    -   Charges were **right-skewed** (many low values, fewer high ones).
+    -   Charges Ire **right-skeId** (many low values, feIr high ones).
     -   BMI had a **normal distribution**.
     -   Smokers had significantly higher charges than non-smokers.
 -   **Correlations:**
@@ -46,25 +46,25 @@ We conducted the following analyses:
 
 ### **Baseline Model: Linear Regression**
 
--   We started with a simple **linear regression model**, which gave moderate performance but failed to capture non-linear relationships.
+-   I started with a simple **linear regression model**, which gave moderate performance but failed to capture non-linear relationships.
 
 ### **Polynomial Regression with Cross-Validation**
 
--   We applied **polynomial features** to improve the model.
--   We tested different **degrees (1 to 9)** with varying **k-fold cross-validation splits (5 to 10 folds)**.
+-   I applied **polynomial features** to improve the model.
+-   I tested different **degrees (1 to 9)** with varying **k-fold cross-validation splits (5 to 10 folds)**.
 -   The best model achieved **R² = 84.1%** with **degree 3 and 5-fold CV**.
 
 ### **Ridge Regression (Regularization)**
 
--   To improve generalization, we applied **Ridge Regression** with hyperparameter tuning.
--   We tested **different alpha values (0.1, 1, 10, 100, 1000)** using **GridSearchCV**.
+-   To improve generalization, I applied **Ridge Regression** with hyperparameter tuning.
+-   I tested **different alpha values (0.1, 1, 10, 100, 1000)** using **GridSearchCV**.
 -   The best model gave the **same performance (84.1%)**, confirming no significant overfitting.
 
 ---
 
 ## 5. Final Model Selection
 
-We saved the best-performing **Ridge Regression model** with polynomial features as the final model using `joblib`:
+I saved the best-performing **Ridge Regression model** with polynomial features as the final model using `joblib`:
 
 ```python
 import joblib
@@ -95,13 +95,13 @@ print("Predicted Charges:", prediction[0])
 1. **Smokers have significantly higher insurance costs**, making smoking status a key predictor.
 2. **BMI and age influence charges**, meaning healthier lifestyle habits may reduce costs.
 3. **The number of children has minimal impact on charges**, showing that insurance rates are not heavily dependent on dependents.
-4. **Regularization (Ridge Regression) did not improve performance**, confirming that the polynomial model was already well-generalized.
+4. **Regularization (Ridge Regression) did not improve performance**, confirming that the polynomial model was already Ill-generalized.
 
 ---
 
 ## 7. Conclusion & Next Steps
 
--   We successfully built a **highly predictive model** for insurance charges (**84.1% accuracy**).
+-   I successfully built a **highly predictive model** for insurance charges (**84.1% accuracy**).
 -   The model is now ready for deployment and can be used to **predict charges for new customers**.
 -   Future improvements could include **feature engineering (e.g., interaction terms)** and **testing ensemble models** like Random Forest or Gradient Boosting for potentially better performance.
 
